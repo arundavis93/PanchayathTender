@@ -18,6 +18,18 @@ namespace PanchayathTender.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult SubmitTender()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult SubmitTender(TenderSubmitViewModel tenderSubmitViewModel)
+        {
+            throw new NotImplementedException();
+        }
+
         public IActionResult Privacy()
         {
             return View();

@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Submit Tender";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Submit Tender Details</h2>
+
+    <form asp-controller="Tender" asp-action="Submit" method="post">
+        <!-- Name -->
+        <div class="mb-3">
+            <label for="Name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mb-3">
+            <label for="PhoneNumber" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="PhoneNumber" name="PhoneNumber" placeholder="Enter your phone number" required>
+        </div>
+
+        <!-- Project Code -->
+        <div class="mb-3">
+            <label for="ProjectCode" class="form-label">Project Code</label>
+            <input type="text" class="form-control" id="ProjectCode" name="ProjectCode" placeholder="Enter project code" required>
+        </div>
+
+        <!-- Price -->
+        <div class="mb-3">
+            <label for="Price" class="form-label">Price</label>
+            <input type="number" class="form-control" id="Price" name="Price" placeholder="Enter price" required>
+        </div>
+
+        <!-- Details -->
+        <div class="mb-3">
+            <label for="Details" class="form-label">Tender Details</label>
+            <textarea class="form-control" id="Details" name="Details" rows="4" placeholder="Enter tender details" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit Tender</button>
+    </form>
+</div>

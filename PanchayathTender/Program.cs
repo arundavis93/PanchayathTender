@@ -1,6 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using PanchayathTender.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<PanchayathTenderDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PanchayathTenderConnection")));
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
